@@ -1,0 +1,10 @@
+[Unit]
+Description=Launch Kuba Kiosk app
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+ExecStart=startx /etc/X11/Xsession /opt/kiosk.sh
+
+[Install]
+WantedBy=multi-user.target
